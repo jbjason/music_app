@@ -23,9 +23,9 @@ class WelcomeScreen extends StatelessWidget {
             left: -size.height * .15,
             height: size.height * .4,
             width: size.height * .35,
-            child: ClipPath(
-              clipper: Clipppp(),
-              child: Container(color: Colors.amber),
+            child: CustomPaint(
+              painter: WelCircle1Painter(),
+              // child: WidgetMask(child: Container(color: Colors.amber)),
             ),
           ),
           Positioned(
