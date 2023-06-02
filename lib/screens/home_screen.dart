@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+import 'package:music_app/constants/constant.dart';
+import 'package:music_app/widgets/home_widgets/h_categories.dart';
+import 'package:music_app/widgets/home_widgets/h_podcast_list.dart';
+import 'package:music_app/widgets/home_widgets/h_search_bar.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final selectedCat = ValueNotifier<int>(0);
+    return Scaffold(
+      body: Stack(
+        children: [
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  const SizedBox(height: 40),
+                  const Text(
+                    'Discover',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28,
+                      letterSpacing: 1.3,
+                      color: textColor,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                  const Text(
+                    'Enjoy your favorite podcast',
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: textSecondary,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  const HSearchBar(),
+                  const SizedBox(height: 20),
+                  // category list
+                  HCategories(selected: selectedCat),
+                  const SizedBox(height: 30),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Trending Podcasts',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: textColor,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'View all',
+                        style: TextStyle(fontSize: 10, color: textSecondary),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  // podcast List
+                  const Expanded(child: HPodCastList())
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

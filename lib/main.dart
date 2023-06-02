@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/screens/welcome_screen.dart';
+import 'package:music_app/constants/constant.dart';
+import 'package:music_app/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        scaffoldBackgroundColor: backColor,
       ),
-      home: const WelcomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
