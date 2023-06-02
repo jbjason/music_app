@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/constants/constant.dart';
 import 'package:music_app/widgets/home_widgets/h_categories.dart';
-import 'package:music_app/widgets/home_widgets/h_podcast_list.dart';
+import 'package:music_app/widgets/home_widgets/h_podlist.dart';
 import 'package:music_app/widgets/home_widgets/h_search_bar.dart';
+import 'package:music_app/widgets/home_widgets/h_top_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -49,9 +50,11 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         'Trending Podcasts',
                         style: TextStyle(
-                            fontSize: 20,
-                            color: textColor,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          color: textColor,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.2,
+                        ),
                       ),
                       Text(
                         'View all',
@@ -61,11 +64,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   // podcast List
-                  const Expanded(child: HPodCastList())
+                  const Expanded(child: HPodList())
                 ],
               ),
             ),
           ),
+          const HTopMenu(),
         ],
       ),
     );

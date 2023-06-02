@@ -14,7 +14,7 @@ class HSearchBar extends StatelessWidget {
             height: 53,
             decoration: BoxDecoration(
               gradient: bodyGradient,
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(22),
               boxShadow: boxShadow,
             ),
             child: Row(
@@ -38,10 +38,18 @@ class HSearchBar extends StatelessWidget {
                     ),
                   ),
                 ),
-                const VerticalDivider(color: Colors.white24),
+                Container(
+                  width: 1.2,
+                  margin: const EdgeInsets.symmetric(vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white12,
+                  ),
+                ),
+                const SizedBox(height: 20),
                 Container(
                   margin: const EdgeInsets.all(4.5),
-                  width: 50,
+                  width: 40,
                   padding: const EdgeInsets.all(6),
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
@@ -52,8 +60,10 @@ class HSearchBar extends StatelessWidget {
                       bottomRight: Radius.circular(11),
                     ),
                   ),
-                  child: Image.asset('assets/icons/settings.png',
-                      color: iconColor),
+                  child: Image.asset(
+                    'assets/icons/settings.png',
+                    color: iconColor,
+                  ),
                 ),
               ],
             ),
