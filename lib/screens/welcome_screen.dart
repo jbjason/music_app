@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/widgets/wel_widgets/wel_login_button.dart';
+import 'package:music_app/widgets/wel_widgets/wel_body.dart';
+import 'package:music_app/widgets/wel_widgets/wel_circle_painter.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -28,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
             child: Container(
               color: Colors.transparent,
               padding: const EdgeInsets.all(10),
-              child: CustomPaint(foregroundPainter: WelCircle1Painter()),
+              child: CustomPaint(foregroundPainter: WelCirclePainter()),
             ),
           ),
           // bottom yellow circl
@@ -37,73 +38,12 @@ class WelcomeScreen extends StatelessWidget {
             right: -size.height * .08,
             height: size.height * .2,
             width: size.height * .2,
-            child: CustomPaint(painter: WelCircle1Painter()),
+            child: CustomPaint(painter: WelCirclePainter()),
           ),
           // texts & signin button
-          Padding(
-            padding: const EdgeInsets.all(30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'me.',
-                    style: TextStyle(fontSize: 25, color: Colors.white),
-                  ),
-                ),
-                getSubHeader('Share'),
-                getSubHeader('Your'),
-                getSubHeader('Music'),
-                getSubtitle('Stream your music & create'),
-                getSubtitle('a unique connection'),
-                getSubtitle('between you and'),
-                getSubtitle('your fans.'),
-                const Spacer(),
-                // signin button
-                const WelLogInButton(),
-                const SizedBox(height: 7),
-                Center(child: getSubtitle('Not yet a member ?')),
-                const SizedBox(height: 20),
-              ],
-            ),
-          ),
+          const WelBody(),
         ],
       ),
     );
   }
-
-  Text getSubHeader(String text) => Text(
-        text,
-        style: TextStyle(
-          fontSize: 50,
-          fontWeight: FontWeight.w900,
-          color: text.contains("Share") ? Colors.pink : Colors.white,
-          letterSpacing: 1.3,
-        ),
-      );
-
-  Text getSubtitle(String text) => Text(
-        text,
-        style: const TextStyle(
-          fontSize: 14,
-          letterSpacing: 1.3,
-          color: Colors.white,
-        ),
-      );
-}
-
-class WelCircle1Painter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final h = size.height, w = size.width;
-    final paint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 40
-      ..color = Colors.yellow[700]!;
-    canvas.drawCircle(Offset(w / 2, h / 2), 80, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
