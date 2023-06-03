@@ -11,15 +11,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final selectedCat = ValueNotifier<int>(0);
-    return Scaffold(
-      body: Stack(
-        children: [
-          SafeArea(
-            child: Padding(
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 50),
                   const Text(
                     'Discover',
                     style: TextStyle(
@@ -39,6 +39,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
+                  // searchField & notification icon
                   const HSearchBar(),
                   const SizedBox(height: 20),
                   // category list
@@ -68,9 +69,9 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-          const HTopMenu(),
-        ],
+            const HTopMenu(),
+          ],
+        ),
       ),
     );
   }

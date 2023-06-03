@@ -9,6 +9,7 @@ class HCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      clipBehavior: Clip.none,
       child: Row(
         children: List.generate(
           categories.length,
@@ -24,7 +25,9 @@ class HCategories extends StatelessWidget {
               child: Text(
                 categories[i],
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: selected.value == i ? 12 : 10,
+                  fontWeight:
+                      selected.value == i ? FontWeight.bold : FontWeight.normal,
                   color: selected.value == i ? backColor : textColor,
                 ),
               ),

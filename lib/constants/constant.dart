@@ -43,18 +43,28 @@ const List<String> categories = [
 
 final List<PodCast> podcasts = [
   PodCast(
-    title: 'Somewhere only we know',
-    singer: 'Keane',
+    title: 'Asleep',
+    singer: 'The Smiths',
     img: 'assets/images/cover2.png',
   ),
   PodCast(
     title: 'Let her go',
     singer: 'Passenger',
-    img: 'assets/images/cover2.png',
+    img: 'assets/images/image4.png',
   ),
   PodCast(
     title: 'November Rain',
     singer: 'Gun\'s n Roses',
-    img: 'assets/images/cover2.png',
+    img: 'assets/images/image5.png',
+  ),
+  PodCast(
+    title: 'Hey Jude',
+    singer: 'The Beatles',
+    img: 'assets/images/image6.jpg',
+  ),
+  PodCast(
+    title: 'There is a light that never goes out',
+    singer: 'The Smiths',
+    img: 'assets/images/image7.jpg',
   ),
 ];

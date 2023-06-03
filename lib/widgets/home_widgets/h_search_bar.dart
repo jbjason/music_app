@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/constants/constant.dart';
+import 'package:music_app/constants/constant_get.dart';
 
 class HSearchBar extends StatelessWidget {
   const HSearchBar({super.key});
@@ -28,10 +29,10 @@ class HSearchBar extends StatelessWidget {
                     decoration: const InputDecoration(
                       contentPadding: EdgeInsets.symmetric(horizontal: 20),
                       border: InputBorder.none,
-                      hintText: 'Search',
+                      hintText: 'Search......',
                       hintStyle: TextStyle(
-                        color: Color(0xFFE0E0E0),
-                        fontSize: 14,
+                        fontSize: 12,
+                        color: textSecondary,
                         letterSpacing: 1.3,
                         wordSpacing: 1.5,
                       ),
@@ -70,12 +71,7 @@ class HSearchBar extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 15),
-        Container(
-          padding: const EdgeInsets.all(15),
-          decoration:
-              const BoxDecoration(shape: BoxShape.circle, color: iconBack1),
-          child: const Icon(Icons.notifications_outlined, color: iconColor),
-        ),
+        getIcon(Icons.notifications_outlined),
       ],
     );
   }
