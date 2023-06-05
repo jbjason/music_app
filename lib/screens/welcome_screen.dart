@@ -15,30 +15,44 @@ class WelcomeScreen extends StatelessWidget {
           // back back cover
           Positioned.fill(
             child: Image.asset(
-              'assets/images/cover3.jpg',
+              'assets/images/cover4.jpg',
               colorBlendMode: BlendMode.colorBurn,
               fit: BoxFit.cover,
             ),
           ),
           // Middle yellow Circle
           Positioned(
-            top: size.height * .4,
-            left: size.height * -.15,
-            height: size.height * .4,
-            width: size.height * .35,
+            top: size.height * .45,
+            left: -size.height * .18,
+            height: size.height * .48,
+            width: size.height * .43,
             child: Container(
               color: Colors.transparent,
               padding: const EdgeInsets.all(10),
-              child: CustomPaint(foregroundPainter: WelCirclePainter()),
+              child: ClipPath(
+                clipper: WelCircle1Clipper(),
+                child: Container(
+                  color: Colors.yellow[700],
+                  child: Image.asset('assets/images/people2.jpg',
+                      fit: BoxFit.cover),
+                ),
+              ),
             ),
           ),
           // bottom yellow circl
           Positioned(
-            bottom: -size.height * .1,
-            right: -size.height * .08,
-            height: size.height * .2,
-            width: size.height * .2,
-            child: CustomPaint(painter: WelCirclePainter()),
+            bottom: -size.height * .13,
+            right: -size.height * .13,
+            height: size.height * .3,
+            width: size.height * .25,
+            child: ClipPath(
+              clipper: WelCircle2Clipper(),
+              child: Container(
+                color: Colors.yellow[700],
+                child:
+                    Image.asset('assets/images/people1.jpg', fit: BoxFit.cover),
+              ),
+            ),
           ),
           // texts & signin button
           const WelBody(),

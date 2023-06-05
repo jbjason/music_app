@@ -45,26 +45,26 @@ final List<PodCast> podcasts = [
   PodCast(
     title: 'Asleep',
     singer: 'The Smiths',
-    img: 'assets/images/cover2.png',
+    img: 'assets/images/image1.png',
   ),
   PodCast(
     title: 'Let her go',
     singer: 'Passenger',
-    img: 'assets/images/image4.png',
+    img: 'assets/images/image2.jpg',
   ),
   PodCast(
     title: 'November Rain',
     singer: 'Gun\'s n Roses',
-    img: 'assets/images/image5.png',
+    img: 'assets/images/image3.jpg',
   ),
   PodCast(
     title: 'Hey Jude',
     singer: 'The Beatles',
-    img: 'assets/images/image6.jpg',
+    img: 'assets/images/image4.jpg',
   ),
   PodCast(
     title: 'There is a light that never goes out',
     singer: 'The Smiths',
-    img: 'assets/images/image7.jpg',
+    img: 'assets/images/image6.jpg',
   ),
 ];

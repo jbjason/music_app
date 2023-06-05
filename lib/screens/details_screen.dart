@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/constants/constant.dart';
 import 'package:music_app/models/podcast.dart';
@@ -34,6 +33,7 @@ class DetailsScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: textColor,
                     fontSize: 20,
+                    fontFamily: 'Casab',
                   ),
                 ),
                 // author

@@ -41,7 +41,10 @@ class HPodListItem extends StatelessWidget {
                       Text(
                         item.title,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(color: textColor),
+                        style: const TextStyle(
+                          color: textColor,
+                          fontFamily: 'Casab',
+                        ),
                       ),
                       Text(
                         item.singer,

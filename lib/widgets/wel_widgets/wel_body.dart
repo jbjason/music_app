@@ -36,21 +36,24 @@ class WelBody extends StatelessWidget {
     );
   }
 
-  Text getSubHeader(String text) => Text(
-        text,
-        style: TextStyle(
-          fontSize: 50,
-          fontWeight: FontWeight.w900,
-          color: text.contains("Share") ? Colors.pink : Colors.white,
-          letterSpacing: 1.3,
-        ),
-      );
+  Text getSubHeader(String text) {
+    final isTrue = text.contains("Share");
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: isTrue ? 60 : 70,
+        fontWeight: FontWeight.w900,
+        color: isTrue ? Colors.pink : Colors.white,
+        fontFamily: 'Script',
+      ),
+    );
+  }
 
   Text getSubtitle(String text) => Text(
         text,
         style: const TextStyle(
           fontSize: 14,
-          letterSpacing: 1.3,
+          fontFamily: 'Vinque',
           color: Colors.white,
         ),
       );

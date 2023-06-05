@@ -26,6 +26,7 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
                       letterSpacing: 1.3,
+                      fontFamily: 'Vinque',
                       color: textColor,
                       fontStyle: FontStyle.italic,
                     ),
