@@ -17,18 +17,18 @@ final bodyGradient = LinearGradient(
   colors: [iconBack1, iconBack1, iconBack1.withOpacity(0.7)],
 );
 
-const boxShadow = [
+final boxShadow = [
   BoxShadow(
-    color: iconBack1,
-    spreadRadius: 2,
-    blurRadius: 10,
-    offset: Offset(3, 3),
+    color: Colors.teal.shade100.withOpacity(0.5),
+    spreadRadius: 1,
+    blurRadius: 3,
+    offset: const Offset(-1, -1),
   ),
-  BoxShadow(
-    color: backColor,
+  const BoxShadow(
+    color: Colors.black,
     spreadRadius: 2,
-    blurRadius: 30,
-    offset: Offset(-2, -2),
+    blurRadius: 20,
+    offset: Offset(5, 5),
   ),
 ];
 

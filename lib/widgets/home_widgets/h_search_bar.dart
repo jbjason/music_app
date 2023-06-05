@@ -16,7 +16,19 @@ class HSearchBar extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: bodyGradient,
               borderRadius: BorderRadius.circular(22),
-              boxShadow: boxShadow,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.teal.shade100.withOpacity(0.5),
+                  blurRadius: 10,
+                  offset: const Offset(-2, -2),
+                ),
+                const BoxShadow(
+                  color: Colors.black,
+                  spreadRadius: 2,
+                  blurRadius: 15,
+                  offset: Offset(5, 5),
+                ),
+              ],
             ),
             child: Row(
               children: [
