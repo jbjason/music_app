@@ -19,8 +19,8 @@ class WelLogInButton extends StatelessWidget {
           padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            color: Colors.white24,
-            border: Border.all(color: Colors.white30),
+            color: Colors.black54,
+            border: Border.all(color: Colors.white70, width: .5),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -22,10 +22,10 @@ class WelcomeScreen extends StatelessWidget {
           ),
           // Middle yellow Circle
           Positioned(
-            top: size.height * .45,
+            top: size.height * .48,
             left: -size.height * .18,
-            height: size.height * .48,
-            width: size.height * .43,
+            height: size.height * .47,
+            width: size.height * .45,
             child: Container(
               color: Colors.transparent,
               padding: const EdgeInsets.all(10),
